@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+.pageTitle {
+  color: white;
+  font-family: "SST Typerwriter Bold";
+  text-align: center;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $smallMedia) {
+    font-size: 38px;
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $mediumMedia) {
+    font-size: 46px;
+    margin-bottom: 120px;
+  }
+
+  @media screen and (min-width: $largeMedia) {
+    font-size: 60px;
+    margin-bottom: 160px;
+  }
+}

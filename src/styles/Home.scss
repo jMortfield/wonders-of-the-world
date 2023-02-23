@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+.homeContainer {
+  background: $blueBackground;
+  padding: 30px;
+  position: relative;
+}
+
+.imageFlexBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,136 @@
+@import './variables.scss';
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px;
+  width: calc(90vw - 20px);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+
+  @media screen and (min-width: $smallMedia)  {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media screen and (min-width: $mediumMedia) { 
+    width: 400px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: $largeMedia)  {
+    width: 500px;
+    height: 500px;
+  }
+
+  &.square {
+    background-position: 67% 27%;
+    background-size: 230%;
+  }
+
+  &.triangle {
+    position: relative;
+    background-position: center;
+    background-size: 150%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: calc(45vw - 10px) solid $blueBackground;;
+      border-right: calc(45vw - 10px) solid $blueBackground;
+      border-bottom: 90vw solid transparent;
+      right: 0;
+
+      @media screen and (min-width: $smallMedia) { 
+        border-left: 150px solid $blueBackground;
+        border-right: 150px solid $blueBackground;
+        border-bottom: 300px solid transparent;
+      }
+
+      @media screen and (min-width: $mediumMedia) { 
+        border-left: 200px solid $blueBackground;
+        border-right: 200px solid $blueBackground;
+        border-bottom: 400px solid transparent;
+      }
+
+      @media screen and (min-width: $largeMedia) {
+        border-left: 250px solid $blueBackground;
+        border-right: 250px solid $blueBackground;
+        border-bottom: 500px solid transparent;
+      }
+    }
+  }
+
+  &.circle {
+    border-radius: 50%;
+    background-size: 150%;
+  }
+
+  &.rectangle {
+    width: calc((90vw - 20px) * (2/3));
+    aspect-ratio: 2 / 3;
+    background-size: cover;
+
+    @media screen and (min-width: $smallMedia) {
+      width: calc(300px * (2/3));
+    }
+  
+    @media screen and (min-width: $mediumMedia) {
+      width: calc(400px * (2/3));
+    }
+  
+    @media screen and (min-width: $largeMedia) {
+      width: calc(500px * (2/3));
+    }
+  }
+}
+
+.overlayContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $blueBackground;
+
+  .overlayImageContainer {
+    width: 60vw;
+    height: 60vh;
+    margin: 0 auto;
+
+    @media screen and (min-width: $smallMedia) {}
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.exitButton {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 15px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+
+  @media screen and (min-width: $smallMedia) {
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+  }
+}
+
