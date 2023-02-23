@@ -57,6 +57,7 @@ const Home = () => {
             setImgOverlay(imgSrc)
             setAltText(altText ? altText : imgSrc)
             setImgTitle( imgTitle )
+            window.scrollTo(0, 0)
           }
           return (
             <ImageShape
